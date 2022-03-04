@@ -8,9 +8,21 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <div class="overlayer"></div>
   <div class="container">
     <div class="card">
-      <input type="text" placeholder="Add To Do">
+      <div class="add-task">
+        <input type="text" placeholder="Add To Do">
+        <input class="add-btn" type="submit" value="+">
+      </div>
+      <div class="to-do-list">
+        <ul class="list">
+          <li class="task">Read about branching</li>
+        </ul>
+        <ul class="list">
+          <li class="task">Push to_do_list to github</li>
+        </ul>
+      </div>
     </div>
   </div>
   <script src="js/main.js"></script>
