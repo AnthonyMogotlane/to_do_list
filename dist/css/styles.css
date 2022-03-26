@@ -4,16 +4,21 @@
   box-sizing: border-box;
 }
 
+:root {
+  --white: #fff;
+}
+
 body {
   background-image: url(/img/background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: center;
   background-attachment: fixed;
 }
 
 /*overlayer*/
-.overlayer {
+body::after {
+  content: "";
   position: absolute;
   background: #000;
   width: 100%;
@@ -24,27 +29,45 @@ body {
   z-index: -1;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .card {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-}
-input {
-  padding: 5px;
+  background: transparent;
+  max-width: 700px;
+  margin: auto;
 }
 
-.to-do-list {
-  margin-top: 20px;
+.card-title {
+  text-align: center;
+  color: var(--white);
+  text-transform: uppercase;
 }
-li {
-  list-style: none;
-  background: #fff;
-  padding: 5px;
-  border-bottom: #000 1px solid;
+
+.input-field {
+  display: flex;
+  margin: 2em auto;
+}
+
+.submit-btn {
+  background: green;
+  color: var(--white);
+  margin-left: .4em;
+}
+
+.card-header {
+  background: #444;
+  color: var(--white);
+}
+
+.delete-item {
+  color: red;
+  float: right;
+}
+
+.clear {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.clear-btn {
+  background: red;
+  color:  var(--white);
 }
